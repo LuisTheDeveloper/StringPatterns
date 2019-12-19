@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<string> ReadString(const string Pattern, const string UserInput);
+vector<string> NaiveSearch(const string Pattern, const string UserInput);
 
 int main(int argc, char* argv[])
 {
@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	std::cin >> userStr;
 
 	if (userPattern.length() > 0 && userStr.length() > 0)
-		arr1 = ReadString(userPattern, userStr);
+		arr1 = NaiveSearch(userPattern, userStr);
 	
 	for (int i = 0; i < arr1.size(); i++)
 	{
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 
 }
 
-vector<string> ReadString(const string Pattern, const string UserInput)
+vector<string> NaiveSearch(const string Pattern, const string UserInput)
 {
 	vector<string>arr1;
 
